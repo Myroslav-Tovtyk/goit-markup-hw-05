@@ -18,7 +18,7 @@
       <nav class="nav">
       <a class="logo" href="./index.html"><span class="logo-blue">Web</span>Studio</a>      
       <ul class="nav-list">
-          <li class="nav-items"><a class="link" href="">Студия</a></li>
+          <li class="nav-items"><a class="link current" href="./index.html">Студия</a></li>
           <li class="nav-items"><a class="link" href="./portfolio.html">Портфолио</a></li>
           <li class="nav-items"><a class="link" href="">Контакты</a></li>
       </ul>
@@ -49,7 +49,18 @@
 
     <section class="hero overlay">        
       <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-      <button class="button" type="button">Заказать услугу</button>        
+
+      <button class="button" data-modal-open type="button">Заказать услугу</button>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <!-- <p></p> -->
+          <button class="modal-close" data-modal-close>
+            <svg class="modal-close-svg" width="18" height="18">
+              <use href="./images/svg/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>  
     </section>
   <!--Cекція Особенности-->
 
@@ -103,13 +114,22 @@
         <h2 class="section-title">Чем мы занимаемся</h2>
         <ul class="list">
             <li class="feachers-list">
-                <img src="./images/img.jpg" alt="Разработка программ" width="370" />
+                <img class="image-doing" src="./images/img.jpg" alt="Разработка программ" width="370" />
+                <div class="describe-doing">
+                  <p>ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+                </div>
             </li>
             <li class="feachers-list">
                 <img src="./images/img1.jpg" alt="Разработка мобильных приложений" width="370" />
+                <div class="describe-doing">
+                  <p>МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+                </div>
             </li>
             <li class="feachers-list">
                 <img src="./images/img2.jpg" alt="Приложения для планшетов" width="370" />
+                <div class="describe-doing">
+                  <p>ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
+                </div>
             </li>
         </ul>
       </div>
@@ -380,6 +400,7 @@
       </div>    
     </div>   
   </footer>
+  <script src="./js/modal.js"></script>
   </body>
 </html>
 
